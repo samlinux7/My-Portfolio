@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdul Samian | Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#3B82F6",
+              secondary: "#1E40AF",
+              accent: "#10B981",
+              dark: "#1F2937",
+              light: "#F3F4F6",
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+
+      body {
+        font-family: "Inter", sans-serif;
+        scroll-behavior: smooth;
+      }
+
+      .section {
+        scroll-margin-top: 80px;
+      }
+
+      .gradient-text {
+        background: linear-gradient(45deg, #3b82f6, #10b981);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+
+      .project-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+
+      .nav-link {
+        position: relative;
+      }
+
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #3b82f6;
+        transition: width 0.3s ease;
+      }
+
+      .nav-link:hover::after {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body class="bg-light text-dark">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white shadow-md z-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <span class="text-xl font-bold gradient-text">Abdul Samian</span>
+          </div>
+          <div class="hidden md:flex items-center space-x-8">
+            <a
+              href="#home"
+              class="nav-link text-gray-700 hover:text-primary transition"
+              >Home</a
+            >
+            <a
+              href="#about"
+              class="nav-link text-gray-700 hover:text-primary transition"
+              >About</a
+            >
+            <a
+              href="#skills"
+              class="nav-link text-gray-700 hover:text-primary transition"
+              >Skills</a
+            >
+            <a
+              href="#projects"
+              class="nav-link text-gray-700 hover:text-primary transition"
+              >Projects</a
+            >
+            <a
+              href="#achievements"
+              class="nav-link text-gray-700 hover:text-primary transition"
+              >Achievements</a
+            >
+            <a
+              href="#contact"
+              class="nav-link text-gray-700 hover:text-primary transition"
+              >Contact</a
+            >
+          </div>
+          <div class="md:hidden flex items-center">
+            <button
+              id="menu-btn"
+              class="text-gray-700 hover:text-primary focus:outline-none"
+            >
+              <i class="fas fa-bars text-xl"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Mobile menu -->
+      <div
+        id="mobile-menu"
+        class="hidden md:hidden bg-white pb-4 px-4 shadow-lg"
+      >
+        <div class="flex flex-col space-y-3">
+          <a
+            href="#home"
+            class="nav-link text-gray-700 hover:text-primary transition"
+            >Home</a
+          >
+          <a
+            href="#about"
+            class="nav-link text-gray-700 hover:text-primary transition"
+            >About</a
+          >
+          <a
+            href="#skills"
+            class="nav-link text-gray-700 hover:text-primary transition"
+            >Skills</a
+          >
+          <a
+            href="#projects"
+            class="nav-link text-gray-700 hover:text-primary transition"
+            >Projects</a
+          >
+          <a
+            href="#achievements"
+            class="nav-link text-gray-700 hover:text-primary transition"
+            >Achievements</a
+          >
+          <a
+            href="#contact"
+            class="nav-link text-gray-700 hover:text-primary transition"
+            >Contact</a
+          >
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="section min-h-screen flex items-center pt-16">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="flex flex-col md:flex-row items-center">
+          <div class="md:w-1/2 mb-10 md:mb-0">
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">
+              Hi, I'm <span class="gradient-text">Abdul Samian</span>
+            </h1>
+            <h2 class="text-2xl md:text-3xl font-semibold mb-6 text-gray-700">
+              Computer Science Student & Developer
+            </h2>
+            <p class="text-lg text-gray-600 mb-8">
+              Passionate about AI, Android Development, Game Development, and
+              Cloud Computing. Building solutions that make life simpler and
+              smarter.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#contact"
+                class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg font-medium transition shadow-lg"
+                >Contact Me</a
+              >
+              <a
+                href="#projects"
+                class="border border-primary text-primary hover:bg-primary hover:text-white px-6 py-3 rounded-lg font-medium transition shadow-lg"
+                >View Projects</a
+              >
+            </div>
+          </div>
+          <div class="md:w-1/2 flex justify-center">
+            <div
+              class="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary shadow-xl"
+            >
+              <img
+                src="profile.jpeg"
+                alt="Abdul Samian Profile"
+                class="w-full h-full object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12 gradient-text">
+          About Me
+        </h2>
+
+        <div class="flex flex-col md:flex-row gap-8">
+          <div class="md:w-1/3 bg-gray-50 p-6 rounded-xl shadow-md">
+            <h3 class="text-xl font-semibold mb-4 text-primary">Basic Info</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-user mt-1 mr-3 text-accent"></i>
+                <span><strong>Name:</strong> Abdul Samian</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt mt-1 mr-3 text-accent"></i>
+                <span><strong>Location:</strong> Sindh, Pakistan</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-birthday-cake mt-1 mr-3 text-accent"></i>
+                <span><strong>Age:</strong> 23</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-graduation-cap mt-1 mr-3 text-accent"></i>
+                <span
+                  ><strong>Degree:</strong> Bachelor's in Computer Science</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-university mt-1 mr-3 text-accent"></i>
+                <span><strong>University:</strong> Sukkur IBA University</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-language mt-1 mr-3 text-accent"></i>
+                <span><strong>Languages:</strong> English, Urdu, Sindhi</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="md:w-2/3">
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md mb-8">
+              <h3 class="text-xl font-semibold mb-4 text-primary">Who I Am</h3>
+              <blockquote
+                class="text-gray-700 italic border-l-4 border-primary pl-4 py-2"
+              >
+                I'm a curious and self-driven Computer Science student from SIBA
+                University, with a passion for AI, Android Development, Game
+                Development, and Cloud Computing. I enjoy learning independently
+                through platforms like LinkedIn Learning, and love building
+                real-world applications that make life simpler and smarter.
+                Outside of tech, you'll find me playing chess or reading books.
+              </blockquote>
+            </div>
+
+            <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+              <h3 class="text-xl font-semibold mb-4 text-primary">Education</h3>
+              <div class="flex items-start">
+                <div class="mr-4 mt-1">
+                  <i class="fas fa-graduation-cap text-2xl text-accent"></i>
+                </div>
+                <div>
+                  <h4 class="font-semibold text-lg">
+                    Bachelor's in Computer Science
+                  </h4>
+                  <p class="text-gray-600">Sukkur IBA University, Pakistan</p>
+                  <p class="text-gray-500">Expected Graduation: 2026</p>
+                  <p class="text-gray-500">
+                    Current Semester: Fifth (as of Aug 2024)
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12 gradient-text">
+          My Skills
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Languages & Frameworks -->
+          <div
+            class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition"
+          >
+            <div class="flex items-center mb-4">
+              <i class="fas fa-code text-2xl mr-3 text-primary"></i>
+              <h3 class="text-xl font-semibold">Languages & Frameworks</h3>
+            </div>
+            <ul class="space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-accent mr-2"></i>
+                <span>Flutter & Dart</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-accent mr-2"></i>
+                <span>JavaScript</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-accent mr-2"></i>
+                <span>Node.js</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-accent mr-2"></i>
+                <span>Firebase</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-accent mr-2"></i>
+                <span>Unity & C#</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-accent mr-2"></i>
+                <span>SQL</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-accent mr-2"></i>
+                <span>HTML, CSS</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Tools & Platforms -->
+          <div
+            class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition"
+          >
+            <div class="flex items-center mb-4">
+              <i class="fas fa-tools text-2xl mr-3 text-primary"></i>
+              <h3 class="text-xl font-semibold">Tools & Platforms</h3>
+            </div>
+            <ul class="space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-accent mr-2"></i>
+                <span>Firebase</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-accent mr-2"></i>
+                <span>Play Console</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-accent mr-2"></i>
+                <span>Git & GitHub</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-accent mr-2"></i>
+                <span>Testfully.io</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-accent mr-2"></i>
+                <span>Canva</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Other Interests -->
+          <div
+            class="bg-white p-6 rounded-xl shadow-md hover:shadow-lg transition"
+          >
+            <div class="flex items-center mb-4">
+              <i class="fas fa-lightbulb text-2xl mr-3 text-primary"></i>
+              <h3 class="text-xl font-semibold">Other Interests</h3>
+            </div>
+            <ul class="space-y-2">
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-accent mr-2"></i>
+                <span>Machine Learning (hands-on with JS)</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-accent mr-2"></i>
+                <span>Cybersecurity (Kali Linux)</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-accent mr-2"></i>
+                <span>Cloud Computing</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-check-circle text-accent mr-2"></i>
+                <span>Backend Architecture</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12 gradient-text">
+          My Projects
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <!-- Project 1 -->
+          <div
+            class="project-card bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300"
+          >
+            <div class="flex items-center mb-4">
+              <div class="bg-primary text-white p-3 rounded-lg mr-4">
+                <i class="fas fa-comments text-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold">Chat Application</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Firebase-based real-time chat application with contact sync and
+              notifications.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm"
+                >Flutter</span
+              >
+              <span
+                class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm"
+                >Firebase</span
+              >
+              <span
+                class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm"
+                >Dart</span
+              >
+            </div>
+            <div class="flex items-center text-accent">
+              <i class="fas fa-trophy mr-2"></i>
+              <span>3rd Prize Winner at University Exhibition</span>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div
+            class="project-card bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300"
+          >
+            <div class="flex items-center mb-4">
+              <div class="bg-primary text-white p-3 rounded-lg mr-4">
+                <i class="fas fa-gamepad text-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold">Snake Game</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Classic snake game built with Unity featuring modern UI and
+              collision detection.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm"
+                >Unity</span
+              >
+              <span
+                class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm"
+                >C#</span
+              >
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div
+            class="project-card bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300"
+          >
+            <div class="flex items-center mb-4">
+              <div class="bg-primary text-white p-3 rounded-lg mr-4">
+                <i class="fas fa-table-tennis text-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold">Pong Game</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Multiplayer Pong game with score tracker and game restart logic.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm"
+                >Unity</span
+              >
+              <span
+                class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm"
+                >C#</span
+              >
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div
+            class="project-card bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300"
+          >
+            <div class="flex items-center mb-4">
+              <div class="bg-primary text-white p-3 rounded-lg mr-4">
+                <i class="fas fa-project-diagram text-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold">FYP Management Portal</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Portal for Final Year Project submissions with group creation and
+              supervisor assignment.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm"
+                >Flutter</span
+              >
+              <span
+                class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm"
+                >Firebase</span
+              >
+            </div>
+          </div>
+
+          <!-- Project 5 -->
+          <div
+            class="project-card bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300"
+          >
+            <div class="flex items-center mb-4">
+              <div class="bg-primary text-white p-3 rounded-lg mr-4">
+                <i class="fas fa-coins text-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold">Crypto Webpage</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Input crypto symbol to fetch real-time data with charts and trends
+              display.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm"
+                >JavaScript</span
+              >
+              <span
+                class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm"
+                >API</span
+              >
+            </div>
+          </div>
+
+          <!-- Project 6 -->
+          <div
+            class="project-card bg-gray-50 p-6 rounded-xl shadow-md hover:shadow-xl transition duration-300"
+          >
+            <div class="flex items-center mb-4">
+              <div class="bg-primary text-white p-3 rounded-lg mr-4">
+                <i class="fas fa-podcast text-xl"></i>
+              </div>
+              <h3 class="text-xl font-semibold">RSS Podcast Broadcaster</h3>
+            </div>
+            <p class="text-gray-600 mb-4">
+              Flutter app that fetches RSS feed URLs and plays episodes for
+              radio broadcasting.
+            </p>
+            <div class="flex flex-wrap gap-2 mb-4">
+              <span
+                class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm"
+                >Flutter</span
+              >
+              <span
+                class="bg-primary bg-opacity-10 text-primary px-3 py-1 rounded-full text-sm"
+                >RSS</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="section py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12 gradient-text">
+          Achievements
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <!-- Academic Achievements -->
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3
+              class="text-xl font-semibold mb-4 flex items-center text-primary"
+            >
+              <i class="fas fa-graduation-cap mr-3"></i>
+              <span>Academic Achievements</span>
+            </h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <div
+                  class="bg-accent bg-opacity-20 text-accent p-2 rounded-full mr-4"
+                >
+                  <i class="fas fa-trophy"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">
+                    3rd Prize Winner — Chat App project
+                  </h4>
+                  <p class="text-gray-600 text-sm">
+                    University Exhibition (July 2024)
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="bg-accent bg-opacity-20 text-accent p-2 rounded-full mr-4"
+                >
+                  <i class="fas fa-atom"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">
+                    Participated in International Physics Olympiad (IPhO)
+                  </h4>
+                  <p class="text-gray-600 text-sm">2021</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="bg-accent bg-opacity-20 text-accent p-2 rounded-full mr-4"
+                >
+                  <i class="fas fa-award"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">
+                    Sindh Talent Hunt Program Scholarship
+                  </h4>
+                  <p class="text-gray-600 text-sm">2021</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="bg-accent bg-opacity-20 text-accent p-2 rounded-full mr-4"
+                >
+                  <i class="fas fa-laptop"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">
+                    Prime Minister Laptop Scheme Awardee
+                  </h4>
+                  <p class="text-gray-600 text-sm">2023</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Other Achievements -->
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3
+              class="text-xl font-semibold mb-4 flex items-center text-primary"
+            >
+              <i class="fas fa-star mr-3"></i>
+              <span>Other Accomplishments</span>
+            </h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <div
+                  class="bg-accent bg-opacity-20 text-accent p-2 rounded-full mr-4"
+                >
+                  <i class="fas fa-globe-europe"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">
+                    Selected for Exchange Program in Italy
+                  </h4>
+                  <p class="text-gray-600 text-sm">
+                    Currently preparing visa documents
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="bg-accent bg-opacity-20 text-accent p-2 rounded-full mr-4"
+                >
+                  <i class="fas fa-microphone"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">
+                    Represented Brazil in SIBAUMUN 3.0
+                  </h4>
+                  <p class="text-gray-600 text-sm">
+                    Topic: Israel-Palestine Conflict
+                  </p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="bg-accent bg-opacity-20 text-accent p-2 rounded-full mr-4"
+                >
+                  <i class="fas fa-flag"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">
+                    Represented Pakistan in UNSC Simulation
+                  </h4>
+                  <p class="text-gray-600 text-sm">Russia-Ukraine conflict</p>
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="bg-accent bg-opacity-20 text-accent p-2 rounded-full mr-4"
+                >
+                  <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">Presentations on Social Issues</h4>
+                  <p class="text-gray-600 text-sm">
+                    Feminism, Aurat March, René Descartes
+                  </p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interests Section -->
+    <section class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12 gradient-text">
+          Interests & Goals
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <!-- Interests -->
+          <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+            <h3
+              class="text-xl font-semibold mb-4 flex items-center text-primary"
+            >
+              <i class="fas fa-heart mr-3"></i>
+              <span>My Interests</span>
+            </h3>
+            <div class="flex flex-wrap gap-3">
+              <span
+                class="bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-full flex items-center"
+              >
+                <i class="fas fa-chess mr-2"></i> Chess
+              </span>
+              <span
+                class="bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-full flex items-center"
+              >
+                <i class="fas fa-book mr-2"></i> Reading
+              </span>
+              <span
+                class="bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-full flex items-center"
+              >
+                <i class="fas fa-pen-fancy mr-2"></i> Writing
+              </span>
+              <span
+                class="bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-full flex items-center"
+              >
+                <i class="fas fa-brain mr-2"></i> Philosophy
+              </span>
+              <span
+                class="bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-full flex items-center"
+              >
+                <i class="fas fa-users mr-2"></i> Social Issues
+              </span>
+              <span
+                class="bg-primary bg-opacity-10 text-primary px-4 py-2 rounded-full flex items-center"
+              >
+                <i class="fas fa-newspaper mr-2"></i> News & Politics
+              </span>
+            </div>
+
+            <div class="mt-6">
+              <h4 class="font-medium mb-2">Inspired by:</h4>
+              <p class="text-gray-600">
+                Syed Muzammil, Romasa Jami, and other thought leaders
+              </p>
+            </div>
+          </div>
+
+          <!-- Learning Goals -->
+          <div class="bg-gray-50 p-6 rounded-xl shadow-md">
+            <h3
+              class="text-xl font-semibold mb-4 flex items-center text-primary"
+            >
+              <i class="fas fa-bullseye mr-3"></i>
+              <span>Learning Goals</span>
+            </h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                <span
+                  >Learn Machine Learning from scratch (with JS and
+                  visualization)</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                <span>Build ML model for handwritten text recognition</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                <span
+                  >Get skilled in Cloud Computing (AWS, Firebase, etc.)</span
+                >
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check-circle text-accent mt-1 mr-3"></i>
+                <span>Improve backend architecture using Node.js</span>
+              </li>
+            </ul>
+
+            <div class="mt-6">
+              <h4 class="font-medium mb-2">Blog/Writing Ideas:</h4>
+              <ul class="list-disc list-inside text-gray-600 space-y-1">
+                <li>Why I Support Aurat March</li>
+                <li>Role of TLP in Protecting Churches in Pakistan</li>
+                <li>My Thoughts on the 1973 Constitution</li>
+                <li>Learning ML in JavaScript — My Journey</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section py-20 bg-gray-50">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold text-center mb-12 gradient-text">
+          Get In Touch
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="text-xl font-semibold mb-4 text-primary">
+              Contact Information
+            </h3>
+            <ul class="space-y-4">
+              <li class="flex items-start">
+                <div
+                  class="bg-primary bg-opacity-10 text-primary p-3 rounded-lg mr-4"
+                >
+                  <i class="fas fa-envelope"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">Email</h4>
+                  <a
+                    href="mailto:samian.sss@email.com"
+                    class="text-gray-600 hover:text-primary transition"
+                    >samian.sss@email.com</a
+                  >
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="bg-primary bg-opacity-10 text-primary p-3 rounded-lg mr-4"
+                >
+                  <i class="fab fa-linkedin-in"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">LinkedIn</h4>
+                  <a
+                    href="#"
+                    class="text-gray-600 hover:text-primary transition"
+                    >linkedin.com/in/samiansss</a
+                  >
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="bg-primary bg-opacity-10 text-primary p-3 rounded-lg mr-4"
+                >
+                  <i class="fab fa-github"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">GitHub</h4>
+                  <a
+                    href="#"
+                    class="text-gray-600 hover:text-primary transition"
+                    >github.com/samiansss</a
+                  >
+                </div>
+              </li>
+              <li class="flex items-start">
+                <div
+                  class="bg-primary bg-opacity-10 text-primary p-3 rounded-lg mr-4"
+                >
+                  <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <div>
+                  <h4 class="font-medium">Location</h4>
+                  <p class="text-gray-600">Sindh, Pakistan</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-md">
+            <h3 class="text-xl font-semibold mb-4 text-primary">
+              Send Me a Message
+            </h3>
+            <form class="space-y-4">
+              <div>
+                <label for="name" class="block text-gray-700 mb-1">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label for="email" class="block text-gray-700 mb-1"
+                  >Email</label
+                >
+                <input
+                  type="email"
+                  id="email"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label for="subject" class="block text-gray-700 mb-1"
+                  >Subject</label
+                >
+                <input
+                  type="text"
+                  id="subject"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                />
+              </div>
+              <div>
+                <label for="message" class="block text-gray-700 mb-1"
+                  >Message</label
+                >
+                <textarea
+                  id="message"
+                  rows="4"
+                  class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="bg-primary hover:bg-secondary text-white px-6 py-3 rounded-lg font-medium transition shadow-lg w-full"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <div class="mb-4 md:mb-0">
+            <span class="text-xl font-bold gradient-text">Abdul Samian</span>
+            <p class="text-gray-400 mt-1">
+              Computer Science Student & Developer
+            </p>
+          </div>
+          <div class="flex space-x-6">
+            <a href="#" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-linkedin-in text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-github text-xl"></i>
+            </a>
+            <a href="#" class="text-gray-400 hover:text-white transition">
+              <i class="fab fa-twitter text-xl"></i>
+            </a>
+          </div>
+        </div>
+        <div
+          class="border-t border-gray-800 mt-6 pt-6 text-center text-gray-400"
+        >
+          <p>&copy; 2024 Abdul Samian. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Mobile menu toggle
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Close mobile menu when clicking on a link
+      const mobileLinks = mobileMenu.querySelectorAll("a");
+      mobileLinks.forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("hidden");
+        });
+      });
+
+      // Smooth scrolling for all links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          document.querySelector(this.getAttribute("href")).scrollIntoView({
+            behavior: "smooth",
+          });
+        });
+      });
+
+      // Add shadow to navbar on scroll
+      window.addEventListener("scroll", () => {
+        const nav = document.querySelector("nav");
+        if (window.scrollY > 10) {
+          nav.classList.add("shadow-lg");
+        } else {
+          nav.classList.remove("shadow-lg");
+        }
+      });
+    </script>
+  </body>
+</html>
